@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BanqueCompare - Comparateur de Banques en France</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+       <nav>
+    <div class="logo">🏦 BanqueCompare</div>
+    
+    <!-- NOUVEAU : Container pour les liens + bouton langue -->
+    <div class="nav-right">
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="comparateur.html">Comparateur</a></li>
+            <li><a href="classement.html">Classement</a></li>
+            <li><a href="banques-traditionnelles.html">Banques Tradi.</a></li>
+            <li><a href="banques-en-ligne.html">Banques Ligne</a></li>
+            <li><a href="guide.html">Guide</a></li>
+            <li><a href="avis.html">Avis</a></li>
+            <li><a href="contact.html">Mon Cv</a></li>
+        </ul>
+        
+        <!-- BOUTON LANGUE -->
+        <div class="language-switcher">
+            <button id="langBtn" onclick="toggleLanguage()">
+                <span id="flagIcon">GB</span> EN
+            </button>
+        </div>
+    </div>
+</nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Trouvez LA banque qui vous correspond</h1>
+        <p>Comparez toutes les banques de France avec des données réelles et vérifiées 2024-2025</p>
+        <a href="comparateur.html" class="btn">Comparer maintenant</a>
+    </section>
+
+    <!-- Features -->
+    <div class="container">
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Données Certifiées</h3>
+                <p>Tarifs officiels vérifiés auprès des banques et sources gouvernementales (Service-Public.fr, CLCV)</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Comparaison Objective</h3>
+                <p>Analyse neutre basée sur les vrais tarifs 2024-2025 et les études de satisfaction client</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Classement Réel</h3>
+                <p>Parts de marché et nombre de clients réels pour chaque banque française</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h2>10</h2>
+                <p>Banques analysées</p>
+            </div>
+            <div class="stat-item">
+                <h2>54M+</h2>
+                <p>Clients en France</p>
+            </div>
+            <div class="stat-item">
+                <h2>2024-25</h2>
+                <p>Données à jour</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Infos vérifiées</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- banque populaire avec VRAIES DONNÉES -->
+    <div class="container popular-banks">
+        <h2>Les Banques en France</h2>
+        <div class="banks-grid">
+            <!-- BoursoBank -->
+            <div class="bank-card">
+                <h3>BoursoBank</h3>
+                <div class="bank-type">Banque en ligne #1</div>
+                <div class="rating">⭐ Élue moins chère depuis 15 ans</div>
+                <div class="info">
+                    <p><strong>7 millions</strong> de clients</p>
+                    <p><strong>100% gratuit</strong></p>
+                    <p>Cartes bancaires gratuites</p>
+                </div>
+            </div>
+
+            <!-- Crédit Agricole -->
+            <div class="bank-card">
+                <h3>Crédit Agricole</h3>
+                <div class="bank-type">Leader français</div>
+                <div class="rating">⭐ 11,5M clients</div>
+                <div class="info">
+                    <p><strong>7000</strong> agences</p>
+                    <p>Banque mutualiste</p>
+                    <p>Carte: ~42€/an</p>
+                </div>
+            </div>
+
+            <!-- Société Générale -->
+            <div class="bank-card">
+                <h3>Société Générale</h3>
+                <div class="bank-type">Banque traditionnelle</div>
+                <div class="rating">⭐ 9,2M clients</div>
+                <div class="info">
+                    <p><strong>2000</strong> agences</p>
+                    <p>Offre Sobrio digitale</p>
+                    <p>Carte: 45€/an</p>
+                </div>
+            </div>
+
+            <!-- BNP Paribas -->
+            <div class="bank-card">
+                <h3>BNP Paribas</h3>
+                <div class="bank-type">Plus grand réseau</div>
+                <div class="rating">⭐ 7,5M clients</div>
+                <div class="info">
+                    <p><strong>1900</strong> agences</p>
+                    <p>Application "Ma Banque"</p>
+                    <p>Carte: 45€/an</p>
+                </div>
+            </div>
+
+            <!-- Fortuneo -->
+            <div class="bank-card">
+                <h3>Fortuneo</h3>
+                <div class="bank-type">Banque en ligne</div>
+                <div class="rating">⭐ 1,2M clients</div>
+                <div class="info">
+                    <p><strong>Carte Gold</strong> gratuite</p>
+                    <p>Retraits gratuits monde</p>
+                    <p>Dès 1800€/mois</p>
+                </div>
+            </div>
+
+            <!-- Caisse d'Épargne -->
+            <div class="bank-card">
+                <h3>Caisse d'Épargne</h3>
+                <div class="bank-type">Banque coopérative</div>
+                <div class="rating">⭐ 8,5M clients</div>
+                <div class="info">
+                    <p>Réseau régional</p>
+                    <p>Livret A historique</p>
+                    <p>Carte: ~40€/an</p>
+                </div>
+            </div>
+
+            <!-- LCL -->
+            <div class="bank-card">
+                <h3>LCL</h3>
+                <div class="bank-type">Crédit Lyonnais</div>
+                <div class="rating">⭐ 6,1M clients</div>
+                <div class="info">
+                    <p><strong>1600</strong> agences</p>
+                    <p>Services personnalisés</p>
+                    <p>Carte: 46€/an</p>
+                </div>
+            </div>
+
+            <!-- Hello bank! -->
+            <div class="bank-card">
+                <h3>Hello bank!</h3>
+                <div class="bank-type">Filiale BNP Paribas</div>
+                <div class="rating">⭐ 100% digital</div>
+                <div class="info">
+                    <p><strong>Gratuit</strong></p>
+                    <p>Accès agences BNP</p>
+                    <p>Condition: 3 paiements/mois</p>
+                </div>
+            </div>
+
+            <!-- N26 -->
+            <div class="bank-card">
+                <h3>N26</h3>
+                <div class="bank-type">Néobanque 100% mobile</div>
+                <div class="rating">⭐ Banque allemande</div>
+                <div class="info">
+                    <p>Ouverture en 8 min</p>
+                    <p>De 0€ à 16,90€/mois</p>
+                    <p>Interface moderne</p>
+                </div>
+            </div>
+
+            <!-- Monabanq -->
+            <div class="bank-card">
+                <h3>Monabanq</h3>
+                <div class="bank-type">Banque en ligne</div>
+                <div class="rating">⭐ Service 7j/7</div>
+                <div class="info">
+                    <p>Conseiller dédié</p>
+                    <p>Carte: 2-3€/mois</p>
+                    <p>Sans conditions revenus</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info importante -->
+    <div class="container">
+        <div class="important-notice">
+            <h3>📌 Informations certifiées</h3>
+            <p>Toutes les données de ce site sont issues de sources officielles vérifiées en novembre 2024 :</p>
+            <ul>
+                <li>Tarifs : Brochures tarifaires officielles des banques + Service-Public.fr</li>
+                <li>Nombre de clients : Rapports annuels officiels des groupes bancaires</li>
+                <li>Comparaisons : Études CLCV, MoneyVox, comparateurs certifiés</li>
+                <li>Évolution : Observatoire des tarifs bancaires 2024-2025</li>
+            </ul>
+            <p><strong>Hausse moyenne 2024-2025 :</strong> +3,1% pour les banques traditionnelles / Banques en ligne stables (gratuites)</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BanqueCompare - Projet BTS SIO</p>
+        <p>Données vérifiées et certifiées • Sources officielles novembre 2024</p>
+        <p><a href="contact.html">Nous contacter</a> | <a href="guide.html">Guide</a></p>
+    </footer>
+</body>
+</html>

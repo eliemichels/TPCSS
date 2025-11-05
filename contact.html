@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV - BanqueCompare</title>
+    <link rel="stylesheet" href="style-cv.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🏦 BanqueCompare</div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="comparateur.html">Comparateur</a></li>
+                    <li><a href="classement.html">Classement</a></li>
+                    <li><a href="banques-traditionnelles.html">Banques Tradi.</a></li>
+                    <li><a href="banques-en-ligne.html">Banques Ligne</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="avis.html">Avis</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cv.html" class="active">Mon CV</a></li>
+                </ul>
+                <!-- BOUTON LANGUE FR/EN -->
+                <div class="language-switcher">
+                    <button id="langBtn" onclick="toggleLanguage()">
+                        <span id="flagIcon">🇬🇧</span> EN
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- VERSION FRANÇAISE -->
+        <div id="content-fr" class="cv-content">
+            <div class="cv-header">
+                <div class="profile-section">
+                    <div class="profile-img">👨‍💻</div>
+                    <div class="profile-info">
+                        <h1>Votre Nom</h1>
+                        <h2>Étudiant BTS SIO - Développeur Web</h2>
+                        <div class="contact-info">
+                            <span>📧 votre.email@example.com</span>
+                            <span>📱 06 XX XX XX XX</span>
+                            <span>📍 Votre Ville, France</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-body">
+                <!-- Profil -->
+                <section class="cv-section">
+                    <h3>👤 Profil</h3>
+                    <p>Étudiant en BTS SIO (Services Informatiques aux Organisations) passionné par le développement web et la programmation. 
+                    Actuellement en train de réaliser un projet de comparateur de banques françaises avec des données réelles vérifiées.</p>
+                </section>
+
+                <!-- Formation -->
+                <section class="cv-section">
+                    <h3>🎓 Formation</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2025</div>
+                        <div class="timeline-content">
+                            <h4>BTS SIO - Services Informatiques aux Organisations</h4>
+                            <p>Option SLAM (Solutions Logicielles et Applications Métiers)</p>
+                            <p>Établissement : [Nom de votre école]</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h4>Baccalauréat</h4>
+                            <p>[Votre série de bac]</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Compétences -->
+                <section class="cv-section">
+                    <h3>💻 Compétences Techniques</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <strong>Développement Web</strong>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%">HTML/CSS</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <strong>JavaScript</strong>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%">JS</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <strong>PHP/MySQL</strong>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 65%">PHP</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <strong>Python</strong>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 60%">Python</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projets -->
+                <section class="cv-section">
+                    <h3>🚀 Projets Réalisés</h3>
+                    <div class="project-card">
+                        <h4>🏦 BanqueCompare - Comparateur de Banques</h4>
+                        <p class="project-date">Novembre 2024</p>
+                        <p>Site web complet de comparaison des banques françaises avec :</p>
+                        <ul>
+                            <li>8 pages HTML avec CSS séparé pour chaque page</li>
+                            <li>Données réelles vérifiées (tarifs officiels 2024-2025)</li>
+                            <li>Design responsive (mobile, tablette, desktop)</li>
+                            <li>Sources certifiées : Service-Public.fr, CLCV, rapports bancaires</li>
+                        </ul>
+                        <p><strong>Technologies :</strong> HTML5, CSS3, JavaScript</p>
+                    </div>
+                </section>
+
+                <!-- Langues -->
+                <section class="cv-section">
+                    <h3>🌍 Langues</h3>
+                    <div class="languages">
+                        <div class="lang-item">
+                            <strong>Français</strong> - Langue maternelle
+                        </div>
+                        <div class="lang-item">
+                            <strong>Anglais</strong> - Niveau intermédiaire (B1/B2)
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Centres d'intérêt -->
+                <section class="cv-section">
+                    <h3>🎯 Centres d'Intérêt</h3>
+                    <div class="interests">
+                        <span class="interest-tag">💻 Programmation</span>
+                        <span class="interest-tag">🌐 Technologies Web</span>
+                        <span class="interest-tag">📊 Analyse de données</span>
+                        <span class="interest-tag">🎮 Gaming</span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="cv-footer">
+                <a href="#" class="btn-download" onclick="window.print(); return false;">📄 Télécharger le CV (PDF)</a>
+            </div>
+        </div>
+
+        <!-- VERSION ANGLAISE -->
+        <div id="content-en" class="cv-content" style="display: none;">
+            <div class="cv-header">
+                <div class="profile-section">
+                    <div class="profile-img">👨‍💻</div>
+                    <div class="profile-info">
+                        <h1>Your Name</h1>
+                        <h2>BTS SIO Student - Web Developer</h2>
+                        <div class="contact-info">
+                            <span>📧 your.email@example.com</span>
+                            <span>📱 +33 6 XX XX XX XX</span>
+                            <span>📍 Your City, France</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-body">
+                <!-- Profile -->
+                <section class="cv-section">
+                    <h3>👤 Profile</h3>
+                    <p>BTS SIO student (IT Services to Organizations) passionate about web development and programming. 
+                    Currently working on a French bank comparison project with verified real data.</p>
+                </section>
+
+                <!-- Education -->
+                <section class="cv-section">
+                    <h3>🎓 Education</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2025</div>
+                        <div class="timeline-content">
+                            <h4>BTS SIO - IT Services to Organizations</h4>
+                            <p>Option SLAM (Software Solutions and Business Applications)</p>
+                            <p>School: [Your school name]</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h4>High School Diploma</h4>
+                            <p>[Your diploma type]</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="cv-section">
+                    <h3>💻 Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <strong>Web Development</strong>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%">HTML/CSS</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <strong>JavaScript</strong>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%">JS</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <strong>PHP/MySQL</strong>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 65%">PHP</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <strong>Python</strong>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 60%">Python</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects -->
+                <section class="cv-section">
+                    <h3>🚀 Projects</h3>
+                    <div class="project-card">
+                        <h4>🏦 BanqueCompare - Bank Comparison Website</h4>
+                        <p class="project-date">November 2024</p>
+                        <p>Complete French bank comparison website with:</p>
+                        <ul>
+                            <li>8 HTML pages with separate CSS for each page</li>
+                            <li>Verified real data (official 2024-2025 rates)</li>
+                            <li>Responsive design (mobile, tablet, desktop)</li>
+                            <li>Certified sources: Service-Public.fr, CLCV, bank reports</li>
+                        </ul>
+                        <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="cv-section">
+                    <h3>🌍 Languages</h3>
+                    <div class="languages">
+                        <div class="lang-item">
+                            <strong>French</strong> - Native
+                        </div>
+                        <div class="lang-item">
+                            <strong>English</strong> - Intermediate (B1/B2)
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Interests -->
+                <section class="cv-section">
+                    <h3>🎯 Interests</h3>
+                    <div class="interests">
+                        <span class="interest-tag">💻 Programming</span>
+                        <span class="interest-tag">🌐 Web Technologies</span>
+                        <span class="interest-tag">📊 Data Analysis</span>
+                        <span class="interest-tag">🎮 Gaming</span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="cv-footer">
+                <a href="#" class="btn-download" onclick="window.print(); return false;">📄 Download CV (PDF)</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BanqueCompare - Projet BTS SIO</p>
+    </footer>
+
+    <!-- SCRIPT POUR LE CHANGEMENT DE LANGUE -->
+    <script>
+        let currentLang = 'fr';
+
+        function toggleLanguage() {
+            const frContent = document.getElementById('content-fr');
+            const enContent = document.getElementById('content-en');
+            const langBtn = document.getElementById('langBtn');
+            const flagIcon = document.getElementById('flagIcon');
+
+            if (currentLang === 'fr') {
+                // Passer à l'anglais
+                frContent.style.display = 'none';
+                enContent.style.display = 'block';
+                langBtn.innerHTML = '<span id="flagIcon">🇫🇷</span> FR';
+                currentLang = 'en';
+                document.documentElement.lang = 'en';
+            } else {
+                // Passer au français
+                frContent.style.display = 'block';
+                enContent.style.display = 'none';
+                langBtn.innerHTML = '<span id="flagIcon">🇬🇧</span> EN';
+                currentLang = 'fr';
+                document.documentElement.lang = 'fr';
+            }
+
+            // Sauvegarder la préférence
+            localStorage.setItem('preferredLanguage', currentLang);
+        }
+
+        // Charger la langue préférée au chargement de la page
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang === 'en') {
+                toggleLanguage();
+            }
+        });
+    </script>
+</body>
+</html>

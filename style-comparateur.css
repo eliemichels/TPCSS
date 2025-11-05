@@ -1,0 +1,313 @@
+/* CSS pour comparateur.html */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+/* Header identique */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #667eea;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Alert box */
+.alert-info {
+    background: #d1ecf1;
+    border-left: 5px solid #0c5460;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+    color: #0c5460;
+}
+
+/* Table de comparaison */
+.comparison-table {
+    background: white;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 40px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 15px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+.highlight-row {
+    background: #f0f8ff;
+}
+
+.highlight-row:hover {
+    background: #e6f2ff;
+}
+
+.bank-name {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+/* Badges */
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.badge-online {
+    background: #28a745;
+    color: white;
+}
+
+.badge-trad {
+    background: #007bff;
+    color: white;
+}
+
+.badge-neo {
+    background: #17a2b8;
+    color: white;
+}
+
+/* Tarifs */
+.tarif-gratuit {
+    background: #d4edda;
+    font-weight: bold;
+    color: #155724;
+}
+
+/* Comparison blocks */
+.comparison-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.comparison-block {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.comparison-block h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price-highlight {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #d4edda;
+    border-radius: 10px;
+}
+
+.price-paid {
+    color: #dc3545;
+    background: #f8d7da;
+}
+
+.comparison-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.comparison-block li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.comparison-block li:before {
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.economics {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff3cd;
+    border-radius: 5px;
+    color: #856404;
+}
+
+/* Sources */
+.sources {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-top: 50px;
+}
+
+.sources h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.sources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sources li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.sources li:before {
+    content: "📌";
+    position: absolute;
+    left: 0;
+}
+
+.update-note {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e7f3ff;
+    border-left: 4px solid #2196F3;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: center;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    td, th {
+        padding: 12px 8px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .comparison-blocks {
+        grid-template-columns: 1fr;
+    }
+}
+footer a {
+    color: #667eea;
+    text-decoration: none;
+}
