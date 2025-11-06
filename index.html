@@ -12,7 +12,7 @@
        <nav>
     <div class="logo">🏦 BanqueCompare</div>
     
-    <!-- NOUVEAU : Container pour les liens + bouton langue -->
+    <!-- Container pour les liens + bouton langue -->
     <div class="nav-right">
         <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
@@ -232,5 +232,41 @@
         <p>Données vérifiées et certifiées • Sources officielles novembre 2024</p>
         <p><a href="contact.html">Nous contacter</a> | <a href="guide.html">Guide</a></p>
     </footer>
+    <script>
+        let currentLang = 'fr';
+
+        function toggleLanguage() {
+            const frContent = document.getElementById('content-fr');
+            const enContent = document.getElementById('content-en');
+            const langBtn = document.getElementById('langBtn');
+
+            if (currentLang === 'fr') {
+                // Passer à l'anglais
+                frContent.style.display = 'none';
+                enContent.style.display = 'block';
+                langBtn.innerHTML = '<span id="flagIcon">🇫🇷</span> FR';
+                currentLang = 'en';
+                document.documentElement.lang = 'en';
+            } else {
+                // Passer au français
+                frContent.style.display = 'block';
+                enContent.style.display = 'none';
+                langBtn.innerHTML = '<span id="flagIcon">🇬🇧</span> EN';
+                currentLang = 'fr';
+                document.documentElement.lang = 'fr';
+            }
+
+            // Sauvegarder la préférence
+            localStorage.setItem('preferredLanguage', currentLang);
+        }
+
+        // Charger la langue préférée au chargement de la page
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang === 'en') {
+                toggleLanguage();
+            }
+        });
+    </script>
 </body>
 </html>
