@@ -9,30 +9,27 @@
 <body>
     <!-- Header -->
     <header>
-       <nav>
-    <div class="logo">🏦 BanqueCompare</div>
-    
-    <!-- Container pour les liens + bouton langue -->
-    <div class="nav-right">
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="comparateur.html">Comparateur</a></li>
-            <li><a href="classement.html">Classement</a></li>
-            <li><a href="banques-traditionnelles.html">Banques Tradi.</a></li>
-            <li><a href="banques-en-ligne.html">Banques Ligne</a></li>
-            <li><a href="guide.html">Guide</a></li>
-            <li><a href="avis.html">Avis</a></li>
-            <li><a href="contact.html">Mon Cv</a></li>
-        </ul>
-        
-        <!-- BOUTON LANGUE -->
-        <div class="language-switcher">
-            <button id="langBtn" onclick="toggleLanguage()">
-                <span id="flagIcon">GB</span> EN
-            </button>
-        </div>
-    </div>
-</nav>
+        <nav>
+            <div class="logo">🏦 BanqueCompare</div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="comparateur.html">Comparateur</a></li>
+                    <li><a href="classement.html">Classement</a></li>
+                    <li><a href="banques-traditionnelles.html">Banques Tradi.</a></li>
+                    <li><a href="banques-en-ligne.html">Banques Ligne</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="avis.html">Avis</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- BOUTON LANGUE -->
+                <div class="language-switcher">
+                    <button id="langBtn" onclick="switchLanguage()">
+                        <span>🇬🇧</span> EN
+                    </button>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -85,7 +82,7 @@
         </div>
     </section>
 
-    <!-- banque populaire avec VRAIES DONNÉES -->
+    <!-- Popular Banks avec VRAIES DONNÉES -->
     <div class="container popular-banks">
         <h2>Les Banques en France</h2>
         <div class="banks-grid">
@@ -232,41 +229,42 @@
         <p>Données vérifiées et certifiées • Sources officielles novembre 2024</p>
         <p><a href="contact.html">Nous contacter</a> | <a href="guide.html">Guide</a></p>
     </footer>
-    <script>
-        let currentLang = 'fr';
+    <div id="google_translate_element" style="display: none;"></div>
 
-        function toggleLanguage() {
-            const frContent = document.getElementById('content-fr');
-            const enContent = document.getElementById('content-en');
-            const langBtn = document.getElementById('langBtn');
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'fr',
+        includedLanguages: 'en,fr'
+    }, 'google_translate_element');
+}
 
-            if (currentLang === 'fr') {
-                // Passer à l'anglais
-                frContent.style.display = 'none';
-                enContent.style.display = 'block';
-                langBtn.innerHTML = '<span id="flagIcon">🇫🇷</span> FR';
-                currentLang = 'en';
-                document.documentElement.lang = 'en';
-            } else {
-                // Passer au français
-                frContent.style.display = 'block';
-                enContent.style.display = 'none';
-                langBtn.innerHTML = '<span id="flagIcon">🇬🇧</span> EN';
-                currentLang = 'fr';
-                document.documentElement.lang = 'fr';
-            }
-
-            // Sauvegarder la préférence
-            localStorage.setItem('preferredLanguage', currentLang);
+function switchLanguage() {
+    const langBtn = document.getElementById('langBtn');
+    const iframe = document.querySelector('.goog-te-menu-frame');
+    
+    if (iframe) {
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const langLinks = innerDoc.querySelectorAll('.goog-te-menu2-item span.text');
+        
+        // Cliquer sur Anglais
+        if (langBtn.textContent.includes('EN')) {
+            langLinks[1].click(); // Anglais
+            langBtn.innerHTML = '<span>🇫🇷</span> FR';
+        } else {
+            langLinks[0].click(); // Français
+            langBtn.innerHTML = '<span>🇬🇧</span> EN';
         }
+    }
+}
 
-        // Charger la langue préférée au chargement de la page
-        window.addEventListener('DOMContentLoaded', function() {
-            const savedLang = localStorage.getItem('preferredLanguage');
-            if (savedLang === 'en') {
-                toggleLanguage();
-            }
-        });
-    </script>
+// Cacher la barre Google
+window.addEventListener('load', function() {
+    const style = document.createElement('style');
+    style.innerHTML = 'body { top: 0 !important; } .goog-te-banner-frame { display: none !important; }';
+    document.head.appendChild(style);
+});
+</script>
 </body>
 </html>
