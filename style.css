@@ -67,25 +67,7 @@ nav {
     margin-left: 20px;
 }
 
-.language-switcher button {
-    background: white;
-    color: #667eea;
-    border: 2px solid white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.9rem;
-}
 
-.language-switcher button:hover {
-    background: rgba(255,255,255,0.9);
-    transform: scale(1.05);
-}
 
 /* Hero Section */
 .hero {
